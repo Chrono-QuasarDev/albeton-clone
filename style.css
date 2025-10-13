@@ -37,11 +37,12 @@
   --spacing-sm: 0.5rem;
   --spacing-md: 1rem;
   --spacing-lg: 2rem;
+  --letter-spacing-tight: -2px;
 }
 
 /*
 |--------------------------------------------------------------------------
-| 2. BASE RESET & ACCESSIBILITY
+|  BASE RESET & ACCESSIBILITY
 |--------------------------------------------------------------------------
 */
 
@@ -55,8 +56,34 @@ html {
   padding: 0;
 }
 
-img, svg, video {
+img, svg, video, picture {
   display: block;
   max-width: 100%;
   height: auto;
 }
+
+
+/* 
+|-------------------------------------------------------------------------------
+| BASE STYLES
+|-------------------------------------------------------------------------------
+ */
+
+ body {
+  font-family: var(--font-family);
+  font-size: var(--fs-base);
+  line-height: var(--line-height-base);
+  color: var(--color-text-default);
+  background-color: var(--color-surface);
+ }
+
+ h1 { font-size: var(--fs-4xl); line-height: var(--line-height-tight); letter-spacing: var(--letter-spacing-tight); }
+ h2 { font-size: var(--fs-3xl); line-height: var(--line-height-tight); }
+ h3 { font-size: var(--fs-2xl); line-height: var(--line-height-tight); }
+ h4 { font-size: var(--fs-xl); line-height: var(--line-height-tight);}
+
+ a {
+  color: var(--color-secondary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+ }
