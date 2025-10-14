@@ -1,0 +1,140 @@
+/* 
+|------------------------------------------------------
+| CSS CUSTOM PROPERTIES
+|------------------------------------------------------
+*/
+
+:root {
+  /* Colors */
+  --color-primary: #ff764d;
+  --color-secondary: #0000ff;
+  --color-surface: #FFFFFF;
+  --color-text-default: #111111;
+  --color-text-secondary: #6B7280;
+  --color-divider: #E5E7EB;
+
+  /* Font Family */
+  --font-family: 'Nunito', sans-serif;
+
+  /* Font Sizes */
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-lg: 1.255rem;
+  --fs-xl: 1.5rem;
+  --fs-2xl: 2rem;
+  --fs-3xl: 3rem;
+  --fs-4xl: 4rem;
+
+  /* Line Heights */
+  --line-height-tight: 1.1;
+  --line-height-base: 1.5;
+
+  /* Font Weight */
+  --fw-regular: 400;
+  --fw-bold: 700;
+
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --letter-spacing-tight: -2px;
+}
+
+/*
+|------------------------------------------------------
+|  BASE RESET & ACCESSIBILITY
+|------------------------------------------------------
+*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img, svg, video, picture {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* 
+|------------------------------------------------------
+| BASE STYLES
+|-----------------------------------------------------
+ */
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--fs-base);
+  line-height: var(--line-height-base);
+  color: var(--color-text-default);
+  background-color: var(--color-surface);
+}
+
+h1 { font-size: var(--fs-4xl); line-height: var(--line-height-tight); letter-spacing: var(--letter-spacing-tight); }
+h2 { font-size: var(--fs-3xl); line-height: var(--line-height-tight); }
+h3 { font-size: var(--fs-2xl); line-height: var(--line-height-tight); }
+h4 { font-size: var(--fs-xl); line-height: var(--line-height-tight);}
+
+a {
+  color: var(--color-secondary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+
+/* 
+|-----------------------------------------------------
+|  COMPONENTS
+|-----------------------------------------------------
+ */
+.nav-container {
+  max-width: 1500px;
+  width: 95%;
+  margin-inline: auto;
+}
+
+
+ /* 
+ |-----------------------------------------------------
+ |  SECTIONS
+ |-----------------------------------------------------
+  */
+
+/* ---------- Header ---------- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--spacing-md);
+}
+
+.nav-menu, .nav-cta, .nav-secondary {
+  display: flex;
+  gap: var(--spacing-lg);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-lg);
+}
+
+.nav-secondary {
+  padding: var(--spacing-md);
+}
+
+.nav-secondary li:first-child {
+  color: var(--color-primary);
+}
+
+.divider {
+  border: 1px solid var(--color-divider);
+  opacity: 0.5;
+}
