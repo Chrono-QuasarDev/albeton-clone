@@ -13,6 +13,8 @@
   --color-text-secondary: #6B7280;
   --color-divider: #E5E7EB;
 
+  --about-bg-1: #fbffa7;
+
   /* Font Family */
   --font-family: 'Nunito', sans-serif;
 
@@ -34,10 +36,10 @@
   --fw-bold: 700;
 
   /* Spacing */
-  --spacing-xs: 0.25rem;
-  --spacing-sm: 0.5rem;
-  --spacing-md: 1rem;
-  --spacing-lg: 2rem;
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 5rem;
   --margin-spacing: 6rem;
   --letter-spacing-tight: -2px;
 }
@@ -126,18 +128,18 @@ ul, ol {
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding: var(--spacing-md);
+  padding: var(--spacing-sm);
 }
 
 .nav-menu, .nav-cta, .nav-secondary {
   display: flex;
-  gap: var(--spacing-lg);
+  gap: var(--spacing-md);
   font-weight: var(--fw-bold);
   font-size: var(--fs-base);
 }
 
 .nav-secondary {
-  padding: var(--spacing-md);
+  padding: var(--spacing-sm);
 }
 
 .nav-secondary li:first-child {
@@ -180,4 +182,28 @@ ul, ol {
 
 .purpose-container {
   margin-bottom: var(--margin-spacing);
+}
+
+.grid-container {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: var(--margin-spacing);
+}
+
+.outer-layout-container {
+  background-color: var(--about-bg-1);
+  padding: var(--spacing-lg);
+  width: 60%;
+  height: 45rem;
+}
+
+.inner-layout {
+  position: absolute;
+  top: 90px;
+  right: 70px;
+  left: 80px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
