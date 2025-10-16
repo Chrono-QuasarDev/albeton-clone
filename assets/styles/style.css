@@ -422,7 +422,7 @@ footer a { color: var(--color-text-default); }
   background-color: var(--color-secondary);
   color: var(--color-divider);
   border: none;
-  padding: 0.5rem 0.8 rem;
+  padding: 0.5rem 0.8rem;
   border-radius: 0 3px 3px 0;
   font-weight: var(--fw-bold);
 }
