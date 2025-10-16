@@ -202,10 +202,10 @@ ul, ol {
 .inner-layout {
   position: absolute;
   top: 90px;
-  right: 70px;
-  left: 80px;
+  right: 0;
+  left: 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -310,7 +310,7 @@ ul, ol {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  place-items: center;
+  align-items: center;
 }
 
 .third-image {
@@ -332,7 +332,12 @@ ul, ol {
 .collage {
   position: absolute;
   top: 0;
-  right: 50px;
-  left: 20px;
+  right: 0;
+  left: 0;
   bottom: 0;
+}
+
+
+.about-descipline h3 {
+  margin-bottom: var(--spacing-sm);
 }
