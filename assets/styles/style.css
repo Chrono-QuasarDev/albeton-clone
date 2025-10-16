@@ -44,6 +44,7 @@
   --spacing-md: 2rem;
   --spacing-lg: 5rem;
   --margin-spacing: 6rem;
+  --footer-grid-gap: 3rem;
   --letter-spacing-tight: -2px;
 }
 
@@ -347,13 +348,11 @@ ul, ol {
 
 .about-descipline h3, .about-passion h3, 
 .about-passion p, .about-employees h3,
-.cta-content p {
+.cta-content p, .newsletter-signup p {
   margin-bottom: var(--spacing-sm);
 }
 
-.dev-collage-container {
-  position: relative;
-}
+.dev-collage-container { position: relative; }
 
 .dev-collage-bg {
   background-color: var(--dev-collage-bg);
@@ -369,13 +368,9 @@ ul, ol {
 }
 
 /* ---------- Cta ---------- */
-.cta {
-  display: flex;
-}
+.cta { display: flex; }
 
-.cta-image {
-  flex: 1;
-}
+.cta-image { flex: 1; }
 
 .cta-content {
   flex: 1;
@@ -388,4 +383,74 @@ ul, ol {
   font-size: var(--fs-lg);
 }
 
-/*  */
+
+/* ---------- Footer ---------- */
+footer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--footer-grid-gap);
+}
+
+footer a { color: var(--color-text-default); }
+
+.footer-grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.footer-column-1, .footer-column-2, 
+.footer-column-3 {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  gap: var(--footer-grid-gap);
+}
+
+.newsletter-form {
+  display: flex;
+}
+
+.newsletter-form input[type="email"] {
+  flex: 1;
+  padding: var(--spacing-xs);
+  border: none;
+  border-radius: 3px 0 0 3px;
+  background-color: rgb(241, 241, 241);
+  outline: none;
+}
+
+.newsletter-form button {
+  background-color: var(--color-secondary);
+  color: var(--color-divider);
+  border: none;
+  padding: 0.5rem 0.8 rem;
+  border-radius: 0 3px 3px 0;
+  font-weight: var(--fw-bold);
+}
+
+.select-group {
+  display: flex;
+  gap: var(--spacing-xs);
+  align-items: center;
+}
+
+select {
+  flex: 1;
+  padding: 0.3rem;
+  background-color: var(--color-surface);
+  font-weight: var(--fw-bold);
+}
+
+.footer-bottom-bar {
+  display: flex;
+  justify-content: space-between;
+  font-weight: var(--fw-bold);
+  margin-bottom: var(--footer-grid-gap);
+}
+
+.legal-links {
+  display: flex;
+  gap: var(--spacing-sm);
+  font-size: var(--fs-sm);
+}
+
+.legal-links a { color: var(--color-text-default); }
