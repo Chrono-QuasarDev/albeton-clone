@@ -14,6 +14,7 @@
   --color-divider: #E5E7EB;
 
   --about-bg-1: #fbffa7;
+  --collage-bg: #b6ffc0;
 
   /* Font Family */
   --font-family: 'Nunito', sans-serif;
@@ -184,7 +185,7 @@ ul, ol {
   margin-bottom: var(--margin-spacing);
 }
 
-.grid-container {
+.flex-container {
   position: relative;
   display: flex;
   justify-content: flex-end;
@@ -302,4 +303,36 @@ ul, ol {
 
 .about-population h3 {
   margin-bottom: var(--spacing-xs);
+}
+
+
+.collage {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  place-items: center;
+}
+
+.third-image {
+  grid-column: 2/3;
+  grid-row: -3/-1;
+}
+
+.collage-container {
+  position: relative;
+  margin-bottom: var(--margin-spacing);
+}
+
+.green-bg {
+  background-color: var(--collage-bg);
+  width: 60%;
+  height: 63rem;
+}
+
+.collage {
+  position: absolute;
+  top: 0;
+  right: 50px;
+  left: 20px;
+  bottom: 0;
 }
