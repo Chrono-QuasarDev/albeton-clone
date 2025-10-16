@@ -15,6 +15,8 @@
 
   --about-bg-1: #fbffa7;
   --collage-bg: #b6ffc0;
+  --dev-collage-bg: #d5b3ff;
+  --cta-bg: #b1c5ff;
 
   /* Font Family */
   --font-family: 'Nunito', sans-serif;
@@ -329,15 +331,61 @@ ul, ol {
   height: 63rem;
 }
 
-.collage {
+.collage, .dev-collage {
   position: absolute;
   top: 0;
   right: 0;
-  left: 0;
+  left: 136px;
   bottom: 0;
 }
 
+.about-descipline, .about-passion,
+.dev-collage-container, .about-employees,
+.cta-content, .cta, main {
+  margin-bottom: var(--margin-spacing);
+}
 
-.about-descipline h3 {
+.about-descipline h3, .about-passion h3, 
+.about-passion p, .about-employees h3,
+.cta-content p {
   margin-bottom: var(--spacing-sm);
 }
+
+.dev-collage-container {
+  position: relative;
+}
+
+.dev-collage-bg {
+  background-color: var(--dev-collage-bg);
+  width: 65%;
+  height: 45rem;
+  margin-inline: auto;
+}
+
+.dev-collage {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ---------- Cta ---------- */
+.cta {
+  display: flex;
+}
+
+.cta-image {
+  flex: 1;
+}
+
+.cta-content {
+  flex: 1;
+  background-color: var(--cta-bg);
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-lg);
+}
+
+/*  */
