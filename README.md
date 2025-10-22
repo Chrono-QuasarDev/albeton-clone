@@ -17,5 +17,5 @@ You can see the current progress or track the development history by cloning the
 2. Open `index.html` in your web browser to view the website.
 
 # Live Preview
-Check out the site here: https://chrono-quasardev.github.io/layout-study-albeton-clone/
+Check out the site here: https://chrono-quasardev.github.io/albeton-clone/
 
